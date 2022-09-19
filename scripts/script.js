@@ -1,5 +1,7 @@
 // script.js
 const container = document.querySelector('.container');
+const newBook = document.querySelector('#new-book');
+const form = document.querySelector('.form');
 let myLibrary = [];
 
 function Book(title, author, pages, read) {
@@ -35,8 +37,20 @@ function displayBooks() {
     }
 }
 
+function toggleForm() {
+    if (form.style.display == 'none') {
+        form.style.display = 'flex';
+    } else {
+        form.style.display = 'none';
+    }
+    
+    
+}
 // test
+form.style.display = 'none';
 const Hobbit = new Book('The Hobbit', 'J.R.R Tolkien', 295, false);
 console.log(Hobbit.info());
 addBookToLibrary(Hobbit);
 displayBooks();
+
+newBook.addEventListener('click', toggleForm);
