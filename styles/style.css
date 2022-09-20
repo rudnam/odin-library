@@ -12,12 +12,29 @@
 }
 
 body {
+    display: flex;
+    justify-content: center;
     min-height: 100%;
+}
+
+main {
+    width: 100%;
     padding: 10px;
-    gap: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
+}
+
+.container {
+    width: min(500px,80%);
+    padding: 10px;
+    border: 1px solid #654321;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+
 }
 
 .card {
@@ -30,7 +47,7 @@ body {
     box-shadow: 3px 3px 2px #d1d1d1;
 }
 
-.form {
+#my-form {
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -48,6 +65,18 @@ button {
     font-size: 0.6rem;
 }
 
-button:hover {
+button:hover, button:focus {
     background-color: #647a50;
+}
+
+.warn {
+    font-size: 0.8rem;
+    color: red;
+    display: none;
+}
+
+input[type=text], input[type=number], select{
+    height: 1.1rem;
+    padding-left: 0.5ch;
+    margin-bottom: 3px;
 }
