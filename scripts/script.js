@@ -82,8 +82,12 @@ function toggleBook(e) {
     }
     displayBooks();
 }
-// test
-form.style.display = 'none';
 
+// test
+const testBook = new Book('The Hobbit', 'J.R.R. Tolkien', 295, 'false');
+myLibrary.push(testBook);
+displayBooks();
+
+form.style.display = 'none';
 newBook.addEventListener('click', toggleForm);
 addBook.addEventListener('click', addBookToLibrary);
