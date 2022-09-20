@@ -37,18 +37,22 @@ function displayBooks() {
     while (container.hasChildNodes()) {
         container.removeChild(container.lastChild);
     }
-    myLibrary.forEach(function (item) {
+    myLibrary.forEach(function (item, index) {
         var bookCard = document.createElement('div');
         bookCard.classList.add('card');
         var p1 = document.createElement('p');
         var p2 = document.createElement('p');
         var p3 = document.createElement('p');
         var p4 = document.createElement('p');
+        var remove = document.createElement('button');
         p1.innerText = `Title: ${item.title}`;
         p2.innerText = `Author: ${item.author}`;
         p3.innerText = `Pages: ${item.pages}`;
         p4.innerText = `Status: ${item.read}`;
-        bookCard.append(p1,p2,p3,p4)
+        remove.innerText = "REMOVE";
+        remove.dataset.index = index;
+        remove.addEventListener('click', removeBook);
+        bookCard.append(p1,p2,p3,p4,remove);
         container.appendChild(bookCard);
     });
 }
@@ -59,6 +63,11 @@ function toggleForm() {
     } else {
         form.style.display = 'none';
     }
+}
+
+function removeBook(e) {
+    myLibrary.splice(e.currentTarget.dataset.index, 1);
+    displayBooks();
 }
 
 // test
