@@ -44,15 +44,19 @@ function displayBooks() {
         var p2 = document.createElement('p');
         var p3 = document.createElement('p');
         var p4 = document.createElement('p');
+        var toggle = document.createElement('button');
         var remove = document.createElement('button');
         p1.innerText = `Title: ${item.title}`;
         p2.innerText = `Author: ${item.author}`;
         p3.innerText = `Pages: ${item.pages}`;
         p4.innerText = `Status: ${item.read}`;
+        toggle.innerText = "TOGGLE";
+        toggle.addEventListener('click', toggleBook);
+        toggle.dataset.index = index;
         remove.innerText = "REMOVE";
         remove.dataset.index = index;
         remove.addEventListener('click', removeBook);
-        bookCard.append(p1,p2,p3,p4,remove);
+        bookCard.append(p1,p2,p3,p4,toggle,remove);
         container.appendChild(bookCard);
     });
 }
@@ -70,6 +74,14 @@ function removeBook(e) {
     displayBooks();
 }
 
+function toggleBook(e) {
+    if (myLibrary[e.currentTarget.dataset.index].read === 'read') {
+        myLibrary[e.currentTarget.dataset.index].read = 'not yet read';
+    } else {
+        myLibrary[e.currentTarget.dataset.index].read = 'read';
+    }
+    displayBooks();
+}
 // test
 form.style.display = 'none';
 

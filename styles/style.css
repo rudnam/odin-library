@@ -69,15 +69,6 @@ button:hover, button:focus {
     background-color: #647a50;
 }
 
-.card button {
-    background-color: rgb(180, 0, 0);
-    align-self: center;
-}
-
-.card button:hover {
-    background-color: rgb(190, 0, 0);
-}
-
 .warn {
     font-size: 0.8rem;
     color: red;
