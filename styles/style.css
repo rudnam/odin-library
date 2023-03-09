@@ -1,82 +1,84 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-    height: 100%;
-    background-color: #fff4bc;
-    color: #654321;
-    font-size: 18px;
-    font-family: 'Times New Roman', serif;
+  height: 100%;
+  background-color: #fff4bc;
+  color: #654321;
+  font-size: 18px;
+  font-family: "Times New Roman", serif;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    min-height: 100%;
+  display: flex;
+  justify-content: center;
+  min-height: 100%;
 }
 
 main {
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 .container {
-    width: min(800px,80%);
-    padding: 10px;
-    border: 1px solid #654321;
-    border-radius: 8px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
-
+  width: min(800px, 80%);
+  padding: 10px;
+  border: 1px solid #654321;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 25px 20px;;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 3px 3px 2px #d1d1d1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 25px 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 3px 3px 2px #d1d1d1;
 }
 
 #my-form {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 button {
-    font: inherit;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    outline: inherit;
-    background-color: #596d48;
-    color: rgb(248, 248, 248);
-    padding: 12px 45px;
-    font-size: 0.6rem;
+  font: inherit;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: inherit;
+  background-color: #596d48;
+  color: rgb(248, 248, 248);
+  padding: 12px 45px;
+  font-size: 0.6rem;
 }
 
-button:hover, button:focus {
-    background-color: #647a50;
+button:hover,
+button:focus {
+  background-color: #647a50;
 }
 
 .warn {
-    font-size: 0.8rem;
-    color: red;
-    display: none;
+  font-size: 0.8rem;
+  color: red;
+  display: none;
 }
 
-input[type=text], input[type=number], select{
-    height: 1.1rem;
-    padding-left: 0.5ch;
-    margin-bottom: 3px;
+input[type="text"],
+input[type="number"],
+select {
+  height: 1.1rem;
+  padding-left: 0.5ch;
+  margin-bottom: 3px;
 }
