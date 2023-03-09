@@ -73,13 +73,15 @@ function displayBooks() {
 
 function addBookToLibrary() {
   if (titleElem.value && authorElem.value && pagesElem.value) {
+    warn.innerText = '';
     const toAdd = new Book(titleElem.value, authorElem.value, pagesElem.value, readElem.value);
     myLibrary.push(toAdd);
     displayBooks();
-    warn.style.display = 'none';
     form.reset();
+  } else if (pagesElem.validity.badInput) {
+    warn.innerText = '* Invalid page value';
   } else {
-    warn.style.display = 'inline';
+    warn.innerText = '* Please fill up all fields';
   }
 }
 

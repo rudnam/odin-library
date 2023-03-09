@@ -72,7 +72,7 @@ button:focus {
 .warn {
   font-size: 0.8rem;
   color: red;
-  display: none;
+  display: inline;
 }
 
 input[type="text"],
@@ -81,4 +81,12 @@ select {
   height: 1.1rem;
   padding-left: 0.5ch;
   margin-bottom: 3px;
+}
+
+input:invalid {
+  border: 1px solid red;
+}
+
+input:focus:invalid {
+  border: initial;
 }
